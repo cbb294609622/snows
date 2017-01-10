@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="app_background_bar">#1E8AE8</color>
+
+    <color name="app_backgound">#EDEDED</color><!--灰色背景-->
+    <color name="app_text_backgound">#667986</color><!--默认字体-->
+
+</resources>
