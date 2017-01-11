@@ -13,4 +13,4 @@
 ###4.增加2个Base类 一个Activity，一个Fragment的。
     注:BaseActivity有带沉浸式状态栏
 ###5.GuideActivity 引导页面
-    //TODO 还没写
+    添加了guidelibrary第三方类库，进行了guide编写，图文需要替换

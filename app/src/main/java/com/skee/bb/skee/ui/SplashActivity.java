@@ -16,6 +16,7 @@ import com.skee.bb.skee.util.ToastUtils;
 
 /**
  * Created by bb on 2017/1/6.
+ * 广告
  */
 public class SplashActivity extends BaseActivity{
 
