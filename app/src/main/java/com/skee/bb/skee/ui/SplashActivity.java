@@ -14,23 +14,30 @@ import com.skee.bb.skee.base.BaseActivity;
 import com.skee.bb.skee.util.ActivityAnimUitl;
 import com.skee.bb.skee.util.ToastUtils;
 
+import butterknife.InjectView;
+
 /**
  * Created by bb on 2017/1/6.
  * 广告
  */
 public class SplashActivity extends BaseActivity{
 
-    private ImageView mSplashImg;
-    private TextView mSplashTime;
+    @InjectView(R.id.splash_picture)
+    ImageView mSplashImg;
+
+    @InjectView(R.id.splash_time)
+    TextView mSplashTime;
     private static final int AD_show = 6;
     private boolean CLOSE_TIMER = true;
 
     @Override
+    public int getLayoutView() {
+        return R.layout.activity_splash;
+    }
+
+    @Override
     public void initView() {
         mContext = SplashActivity.this;
-        setContentView(R.layout.activity_splash);
-        mSplashImg = (ImageView) findViewById(R.id.splash_picture);
-        mSplashTime = (TextView) findViewById(R.id.splash_time);
         showAnimImg();
     }
 

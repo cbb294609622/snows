@@ -14,3 +14,5 @@
     注:BaseActivity有带沉浸式状态栏
 ###5.GuideActivity 引导页面
     添加了guidelibrary第三方类库，进行了guide编写，图文需要替换
+###6.Butterknife 增加注解 
+    放弃findviewById,使用注解view不能是private类型。

@@ -24,13 +24,15 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.InjectView;
+
 /**
  * Created by bb on 2017/1/10.
  * 引导页
  */
 public class GuideActivity extends BaseActivity  implements ViewPager.OnPageChangeListener {
-
-    private ViewPager extraPager;
+    @InjectView(R.id.extra_pager)
+    ViewPager extraPager;
 
     private Scene pageScene1_2;
     private Scene pageScene2_3;
@@ -46,9 +48,10 @@ public class GuideActivity extends BaseActivity  implements ViewPager.OnPageChan
     private Scene textScene4;
 
     private ViewGroup mTextSceneRoot;
-
-    private View mStartBtn;
-    private View mPathBtn;
+    @InjectView(R.id.start)
+    View mStartBtn;
+    @InjectView(R.id.through)
+    View mPathBtn;
     private AlphaAnimation mShowAnimation;
     private AlphaAnimation mHideAnimation;
     private AlphaAnimation mTextHideAnimation;
@@ -65,12 +68,13 @@ public class GuideActivity extends BaseActivity  implements ViewPager.OnPageChan
     };
 
     @Override
-    public void initView() {
-        setContentView(R.layout.activity_guide);
-        extraPager = (ViewPager) findViewById(R.id.extra_pager);
-        initSmoothScrollToViewPager(extraPager);
+    public int getLayoutView() {
+        return R.layout.activity_guide;
+    }
 
-        mStartBtn = findViewById(R.id.start);
+    @Override
+    public void initView() {
+        initSmoothScrollToViewPager(extraPager);
         View.OnClickListener finishClick = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +86,6 @@ public class GuideActivity extends BaseActivity  implements ViewPager.OnPageChan
         };
         mStartBtn.setOnClickListener(finishClick);
         mStartBtn.setVisibility(View.INVISIBLE);
-        mPathBtn = findViewById(R.id.through);
         mPathBtn.setOnClickListener(finishClick);
 
         mShowAnimation = new AlphaAnimation(0.0f, 1.0f);

@@ -8,6 +8,8 @@ import android.view.WindowManager;
 
 import com.skee.bb.skee.util.ToastUtils;
 
+import butterknife.ButterKnife;
+
 /**
  * 管理APP中的Activity
  * Created by BoBo on 2015/9/24.
@@ -24,14 +26,20 @@ public abstract class BaseActivity extends FragmentActivity {
             getWindow().addFlags(
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
+        setContentView(getLayoutView());
+        ButterKnife.inject(this);
         mContext = getApplicationContext();
-
         initView();
         initData();
     }
 
     /**
-     * 初始化布局文件
+     * 布局文件
+     */
+    public abstract int getLayoutView();
+
+    /**
+     * view初始化
      */
     public abstract void initView();
 

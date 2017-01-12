@@ -12,9 +12,13 @@ public class MainActivity extends BaseActivity {
     private Context mContext;
 
     @Override
+    public int getLayoutView() {
+        return R.layout.activity_main;
+    }
+
+    @Override
     public void initView() {
         mContext = MainActivity.this;
-        setContentView(R.layout.activity_main);
     }
 
     @Override
