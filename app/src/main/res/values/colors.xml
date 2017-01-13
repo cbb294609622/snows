@@ -7,5 +7,7 @@
 
     <color name="app_backgound">#EDEDED</color><!--灰色背景-->
     <color name="app_text_backgound">#667986</color><!--默认字体-->
+    <color name="app_ju_huang">#F9593E</color><!-- 橘黄 -->
 
+    <color name="app_hint_text">#55ffffff</color>
 </resources>
